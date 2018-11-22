@@ -43,11 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class e interface\classe\Bicicleta.cs" />
+    <Compile Include="class e interface\classe\Carro.cs" />
+    <Compile Include="class e interface\classe\Detran.cs" />
+    <Compile Include="class e interface\classe\Motocicleta.cs" />
+    <Compile Include="class e interface\interfaces\ieixos.cs" />
+    <Compile Include="class e interface\interfaces\imarca.cs" />
+    <Compile Include="class e interface\interfaces\Imodelo.cs" />
+    <Compile Include="class e interface\classe\Veiculo.cs" />
+    <Compile Include="class e interface\interfaces\Iplaca.cs" />
+    <Compile Include="class e interface\interfaces\Ipontencia.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
