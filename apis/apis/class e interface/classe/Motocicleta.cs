@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using apis.class_e_interface.interfaces;
 namespace apis.class_e_interface.classe
 {
-  class Motocicleta:Veiculo
+  public class Motocicleta:Veiculo
     {
         public Motocicleta():base("Yamaha", "XTZ 150 CrosserZ ", 2)
         {
-            Console.WriteLine("Marca: " + this.marca + "Modelo: " + this.modelo
-                + "Numero de eixos:" + this.eixos);
+            
+            Console.WriteLine("Marca: " + this.marca + ",Modelo: " + this.modelo
+                + " ,Numero de eixos:" + this.eixos);
         }
         public void Numero_veiculo_motorizado()
         {

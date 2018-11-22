@@ -8,6 +8,6 @@ namespace apis.class_e_interface
 {
     interface imarca
     {
-        string marca { get; set; }
+        string marca { get; }
     }
 }

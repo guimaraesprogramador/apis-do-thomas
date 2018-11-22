@@ -8,6 +8,6 @@ namespace apis.class_e_interface
 {
     interface Imodelo
     {
-        string modelo { get; set; }
+        string modelo { get; }
     }
 }

@@ -6,20 +6,17 @@ using System.Threading.Tasks;
 using apis.class_e_interface.classe;
 namespace apis.class_e_interface
 {
-    class Veiculo:Detran, Imodelo,imarca,ieixos
+   public class Veiculo:Detran, Imodelo,imarca,ieixos
     {
-        public string modelo { get; set; }
-        public string marca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string modelo { get; }
+        public string marca { get;  }
         public virtual int tipo_eixos
         {
             get
             {
                 return eixos;
             }
-            set
-            {
-                eixos = eixos;
-            }
+            
         }
         //placa da veiculo motorizado;
         public override string Placas_motorizado
@@ -37,12 +34,13 @@ namespace apis.class_e_interface
                 return 25000;
             }
         } 
-        public int eixos { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int eixos { get; }
         public Veiculo(string Marca, string Modelo,int Eixos)
         {
-            Marca = this.marca;
-            Modelo = this.modelo;
-            Eixos = this.eixos;
+            this.eixos = Eixos;
+            this.marca = Marca;
+            this.modelo = Modelo;
+           
         }
     }
 }
