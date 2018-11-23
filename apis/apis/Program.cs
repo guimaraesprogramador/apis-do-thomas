@@ -13,8 +13,12 @@ namespace apis
         {
             Console.WriteLine("Motocicleta");
             Motocicleta motocicleta = new Motocicleta();
+            Console.WriteLine("Carro:");
             Carro carro = new Carro();
+            Console.WriteLine("Caminhão:");
             Caminhão caminhão = new Caminhão();
+            Console.WriteLine("Bicicleta:");
+            Bicicleta bicicleta = new Bicicleta();
             Console.ReadKey();
         }
     }

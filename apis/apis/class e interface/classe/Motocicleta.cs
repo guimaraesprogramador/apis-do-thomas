@@ -12,7 +12,8 @@ namespace apis.class_e_interface.classe
         {
             
             Console.WriteLine("Marca: " + this.marca + ",Modelo: " + this.modelo
-                + " ,Numero de eixos:" + this.eixos);
+                + " ,Numero de eixos:" + this.eixos+ ", potencia:"+this.potencias_Motocicleta
+                +", placa:"+Placas_Motocicleta);
         }
         public override float potencias_Motocicleta
         {

@@ -10,8 +10,8 @@ namespace apis.class_e_interface.classe
 {
         public Bicicleta():base("BIK","BARRA Cicluar", 2)
         {
-            Console.WriteLine("Marca: " + this.marca + "Modelo: " + this.modelo
-                +"Numero de eixos:"+this.eixos);
+            Console.WriteLine("Marca: " + this.marca + ", Modelo: " + this.modelo
+                +", Numero de eixos:"+this.eixos);
         }
 }
 }

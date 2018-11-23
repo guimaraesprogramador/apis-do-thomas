@@ -59,7 +59,7 @@ namespace apis.class_e_interface
             }
             else
             {
-                Eixos = tipo_eixos;
+                this.eixos = tipo_eixos;
             }
         }
     }
