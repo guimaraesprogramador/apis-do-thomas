@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 using apis.class_e_interface.classe;
 namespace apis.class_e_interface
 {
-   public class Veiculo:Detran, Imodelo,imarca,ieixos
+   internal class Veiculo:Detran, Imodelo,imarca,ieixos
     {
         public string modelo { get; }
         public string marca { get;  }
+        public Veiculo()
+        {
+
+        }
         public virtual int tipo_eixos
         {
             get
@@ -18,29 +22,45 @@ namespace apis.class_e_interface
             }
             
         }
-        //placa da veiculo motorizado;
-        public override string Placas_motorizado
+        //placa de Motocicleta;
+        public override string Placas_Motocicleta
         {
             get
             {
                 return "8xs55";
             }
         }
-        public override float potencias_motorizado
+        //potencia de Motocicleta;
+        public override float potencias_Motocicleta
         {
 
             get
             {
                 return 25000;
             }
-        } 
-        public int eixos { get; }
-        public Veiculo(string Marca, string Modelo,int Eixos)
+        }
+        public override float potencias_caminhão
         {
-            this.eixos = Eixos;
+            get
+            {
+                return 360000;
+            }
+        }
+
+        public int eixos { get; }
+        public Veiculo(string Marca, string Modelo, int Eixos)
+        {
+            
             this.marca = Marca;
             this.modelo = Modelo;
-           
+            if(Eixos == 2)
+            {
+                this.eixos = Eixos;
+            }
+            else
+            {
+                Eixos = tipo_eixos;
+            }
         }
     }
 }

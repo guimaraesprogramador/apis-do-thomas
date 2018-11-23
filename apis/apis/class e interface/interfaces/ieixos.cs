@@ -8,6 +8,6 @@ namespace apis.class_e_interface
 {
     interface ieixos
     {
-         int eixos { get; }
+         int  eixos { get; }
     }
 }

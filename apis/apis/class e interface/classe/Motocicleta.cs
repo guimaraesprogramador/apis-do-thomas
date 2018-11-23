@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using apis.class_e_interface.interfaces;
 namespace apis.class_e_interface.classe
 {
-  public class Motocicleta:Veiculo
+  class Motocicleta:Veiculo
     {
         public Motocicleta():base("Yamaha", "XTZ 150 CrosserZ ", 2)
         {
@@ -14,13 +14,17 @@ namespace apis.class_e_interface.classe
             Console.WriteLine("Marca: " + this.marca + ",Modelo: " + this.modelo
                 + " ,Numero de eixos:" + this.eixos);
         }
+        public override float potencias_Motocicleta
+        {
+
+            get
+            {
+                return 25000;
+            }
+        }
         public void Numero_veiculo_motorizado()
         {
-            //placa de motorizado e pontencia de motorizado
-            double resultado_eixos = Math.Pow(this.eixos, potencias_motorizado);
-            Console.WriteLine("Marca: " + this.marca + "Modelo: " + this.modelo
-               + "Numero de eixos:" + this.eixos + "placa: " +Placas_motorizado +
-               "potencia:" + resultado_eixos + " cavalos");
+           
         }
         
 

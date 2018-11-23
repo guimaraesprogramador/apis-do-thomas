@@ -11,8 +11,10 @@ namespace apis
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Motocicleta");
             Motocicleta motocicleta = new Motocicleta();
-            Veiculo V = (Veiculo)motocicleta;
+            Carro carro = new Carro();
+            Caminhão caminhão = new Caminhão();
             Console.ReadKey();
         }
     }

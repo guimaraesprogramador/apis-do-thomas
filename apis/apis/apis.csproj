@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="class e interface\classe\Bicicleta.cs" />
+    <Compile Include="class e interface\classe\Caminhão.cs" />
     <Compile Include="class e interface\classe\Carro.cs" />
     <Compile Include="class e interface\classe\Detran.cs" />
     <Compile Include="class e interface\classe\Motocicleta.cs" />
