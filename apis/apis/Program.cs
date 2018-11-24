@@ -19,6 +19,8 @@ namespace apis
             Caminhão caminhão = new Caminhão();
             Console.WriteLine("Bicicleta:");
             Bicicleta bicicleta = new Bicicleta();
+            Console.WriteLine("Cadeira de rodas:");
+            Cadeira_rodas _Rodas = new Cadeira_rodas();
             Console.ReadKey();
         }
     }

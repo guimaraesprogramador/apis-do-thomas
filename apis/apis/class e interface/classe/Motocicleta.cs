@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using apis.class_e_interface.interfaces;
 namespace apis.class_e_interface.classe
 {
-  class Motocicleta:Veiculo
+   class Motocicleta:Veiculo
     {
         public Motocicleta():base("Yamaha", "XTZ 150 CrosserZ ", 2)
         {

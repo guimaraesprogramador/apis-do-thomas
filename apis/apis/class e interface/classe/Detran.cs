@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using apis.class_e_interface.interfaces;
 namespace apis.class_e_interface.classe
 {
- internal class Detran: Ipontencia, Iplaca
+abstract class Detran: Ipontencia, Iplaca
     {
 
     

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using apis.class_e_interface.classe;
 namespace apis.class_e_interface
 {
-   internal class Veiculo:Detran, Imodelo,imarca,ieixos
+   class Veiculo:Detran, Imodelo,imarca,ieixos
     {
         public string modelo { get; }
         public string marca { get;  }
