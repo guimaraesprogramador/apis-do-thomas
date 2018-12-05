@@ -6,60 +6,44 @@ using System.Threading.Tasks;
 using apis.class_e_interface.interfaces;
 namespace apis.class_e_interface.classe
 {
-abstract class Detran: Ipontencia, Iplaca
+  class Detran
     {
 
-    
-       public virtual string Placas_Motocicleta
-        {
-            get
-            {
-                return placa;
-            }
-            
-                
-        }
-            
-       public virtual float potencias_Motocicleta
-        {
-            get
-            {
-                return potencia ;
-            }
-            
-        }
-        public virtual float potencias_caminhão
-        {
-            get
-            {
-                return potencia;
-            }
-        }
-        public virtual string placa_caminhão
-        {
-            get
-            {
-                return placa;
-            }
-        }
-        
-        public float potencia => 25;
 
-        public  string placa => "xss555";
+      
 
-        public void potencia_Motocicleta()
+        public static int eixo(int tipo_eixo)
         {
-            Veiculo motocicleta = new Veiculo();
-            Console.WriteLine("Marca: " + motocicleta.marca + "Modelo: " + motocicleta.modelo
-              + "Numero de eixos:" + motocicleta.eixos + "placa: " + motocicleta.Placas_Motocicleta +
-              "potencia:" + motocicleta.potencias_Motocicleta + " cavalos");
+           
+            if(tipo_eixo == 2)
+            {
+                return 2;
+            }
+            else
+            {
+                return tipo_eixo;
+            }
         }
-        public void eixos_numero_caminhão()
+        public static float POTENCIA(float tipo_potencia)
         {
-            Caminhão caminhão = new Caminhão();
-            Console.WriteLine("Marca: " +caminhão.marca + "Modelo: " + caminhão.modelo
-             + "Numero de eixos:" + caminhão.eixos + "placa: " + caminhão.Placas_Motocicleta +
-             "potencia:" + caminhão.potencias_caminhão + " cavalos");
+            if(tipo_potencia > 100)
+            {
+                return 100;
+            }
+            else
+            {
+                return tipo_potencia;
+            }
+          
+        }
+        public static string gerarplacanova()
+        {
+            Random random = new Random();
+            const string letras ="abcdefghijklemopqrst" ;
+            const string numeros_inteiros ="0123456789";
+            string placa_letras = new string(Enumerable.Repeat(letras, 4).Select(s => s[random.Next(s.Length)]).ToArray());
+            string placa_numeros = new string(Enumerable.Repeat(numeros_inteiros, 4).Select(s => s[random.Next(s.Length)]).ToArray());
+            return placa_letras + placa_numeros;
         }
     }
 }

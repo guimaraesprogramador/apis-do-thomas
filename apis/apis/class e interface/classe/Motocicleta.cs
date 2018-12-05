@@ -6,28 +6,22 @@ using System.Threading.Tasks;
 using apis.class_e_interface.interfaces;
 namespace apis.class_e_interface.classe
 {
-   class Motocicleta:Veiculo
+   class Motocicleta:Veiculo,Iplaca,Ipontencia
     {
-        public Motocicleta():base("Yamaha", "XTZ 150 CrosserZ ", 2)
+        public Motocicleta()
         {
             
-            Console.WriteLine("Marca: " + this.marca + ",Modelo: " + this.modelo
-                + " ,Numero de eixos:" + this.eixos+ ", potencia:"+this.potencias_Motocicleta
-                +", placa:"+Placas_Motocicleta);
+         
         }
-        public override float potencias_Motocicleta
-        {
 
-            get
-            {
-                return 25000;
-            }
-        }
-        public void Numero_veiculo_motorizado()
-        {
-           
-        }
-        
+        public string placa { get; private set; }
 
+        public float potencia => Detran.POTENCIA(60);
+
+        public string emplacar()
+        {
+            placa = Detran.gerarplacanova();
+            return placa;
+        }
     }
 }

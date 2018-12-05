@@ -9,5 +9,6 @@ namespace apis.class_e_interface.interfaces
      interface Iplaca
     {
       string  placa { get; }
+        string emplacar();
     }
 }

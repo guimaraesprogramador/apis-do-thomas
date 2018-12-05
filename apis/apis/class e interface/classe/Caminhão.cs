@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using apis.class_e_interface.interfaces;
 namespace apis.class_e_interface.classe
 {
-    class Caminhão:Veiculo
+    class Caminhão:Veiculo,Iplaca,Ipontencia,ieixos
     {
-        public override int tipo_eixos => 5;
-        public Caminhão():base("Mercedes-Benz","novo 2018",  5)
+        public Caminhão()
         {
-            Console.WriteLine("Marca: " + this.marca + ", Modelo: " + this.modelo
-                + ",Numero de eixos: " + this.eixos + ",placa:  " + this.placa_caminhão +
-                ",potencia: " + this.potencias_caminhão);
+            
         }
-        public override float potencias_caminhão => 480000;
-        public override string placa_caminhão => "hjkaa000";
+        public override int eixos => Detran.eixo(5);
+        public float potencia => Detran.POTENCIA(1000);
+
+        public string placa { get; private set; }
+
+        public string emplacar()
+        {
+            placa = Detran.gerarplacanova();
+            return placa;
+        }
     }
 }

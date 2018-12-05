@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 using apis.class_e_interface.interfaces;
 namespace apis.class_e_interface.classe
 {
-   internal class Carro : Veiculo
+   internal class Carro : Veiculo,Iplaca,Ipontencia
     {
-        public Carro():base("go","novo 2017", 2)
+        public Carro()
         {
-            //placa de carro e pontencia de carro
-            Console.WriteLine("Marca: " + this.marca + ", Modelo: " + this.modelo
-                + ",Numero de eixos: " + this.eixos+",placa:  " + placa +
-                ",potencia: "+potencia);
 
         }
+        public override int eixos => Detran.eixo(2);
+        public string placa { get; private set; }
 
+        public float potencia => Detran.POTENCIA(100);
+
+        public string emplacar()
+        {
+            placa = Detran.gerarplacanova();
+            return placa;
+        }
     }
 }
